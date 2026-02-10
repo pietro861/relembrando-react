@@ -6,3 +6,4 @@ import { Card } from 'primereact/card';
    </p>
 </Card>
 
+export {Card}
