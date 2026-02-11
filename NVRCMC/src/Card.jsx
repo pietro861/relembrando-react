@@ -1,9 +1,11 @@
-import { Card } from 'primereact/card';
+import { Card as PrimeCard } from 'primereact/card';
 
-<Card titli="Simple Card">
-   <p className="m-0">
-   Bem vindo ao site
-   </p>
-</Card>
+function Card() {
+  return (
+    <PrimeCard title="Simple Card">
+      <p className="m-0">Lorem ipsum</p>
+    </PrimeCard>
+  );
+}
 
-export {Card}
+export default Card;
