@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/HomePage'
 import TodosPage from './pages/TodosPages'
+import Card from './Card';
 // import Header from './components/Header'
 // import Footer from './components/Footer'
 
