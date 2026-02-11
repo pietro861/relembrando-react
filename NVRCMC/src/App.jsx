@@ -1,8 +1,8 @@
 import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/HomePage'
 import TodosPage from './pages/TodosPages'
-import Card from './Card';
+import PlaceholderPage from './pages/PlaceholderPage'
 // import Header from './components/Header'
 // import Footer from './components/Footer'
 
@@ -13,6 +13,7 @@ export default function App(){
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/todos" element={<TodosPage/>} />
+        <Route path="/sobre" element={<PlaceholderPage/>} />
       </Routes>
       {/* <Footer /> */}
     </div>

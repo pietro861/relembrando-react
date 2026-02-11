@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
@@ -61,6 +61,9 @@ export default function Home() {
         <h1>📱 Social Hub</h1>
         <Link to="/todos" className="btn btn-primary">
           ✓ Tarefas
+        </Link>
+        <Link to="/sobre" className="btn btn-secondary">
+          Sobre
         </Link>
       </header>
 
