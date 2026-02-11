@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { MeterGroup } from 'primereact/metergroup';
+        
 
 export default function TodosPage() {
   const [todos, setTodos] = useState([]);
@@ -45,7 +47,7 @@ export default function TodosPage() {
 
   const completedCount = todos.filter(t => t.completed).length;
   const pendingCount = todos.filter(t => !t.completed).length;
-
+  
   return (
     <div className="app-container">
       <header className="todos-header">
@@ -54,6 +56,7 @@ export default function TodosPage() {
         </Link>
         <h1>✓ Lista de Tarefas</h1>
       </header>
+    
 
       <div className="todos-stats">
         <div className="stat-card total">
@@ -103,10 +106,15 @@ export default function TodosPage() {
             const completed = allUserTodos.filter(t => t.completed).length;
             const total = allUserTodos.length;
             const percentage = Math.round((completed / total) * 100);
+            const meterValues = [
+                  { label: 'Concluídas', value: completed, color: '#34d399' },
+                  { label: 'Pendentes', value: total - completed, color: '#f87171' }
+];
 
             return (
               <div key={user.id} className="todo-card">
                 <div className="todo-card-header">
+                  <MeterGroup values={meterValues} />
                   <div>
                     <h2 className="user-name">👤 {user.name}</h2>
                     <p className="user-username">@{user.username}</p>
